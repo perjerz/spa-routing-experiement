@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Routing Experiment</title>
+    <script src="https://unpkg.com/htmx.org@1.6.0/dist/htmx.min.js" defer></script>
+    <script src="https://unpkg.com/htmx.org@1.6.0/dist/ext/path-deps.js" defer></script>
+</head>
+<body id="body">
+    <!-- Menu -->
+    <header style="background-color: aquamarine; height: 100px;">
+        <h1>This is Header</h1>
+        <section id="menu">
+            <a hx-get="component/home" hx-target="#content" hx-push-url="/home-page">Home</a>
+            <a hx-post="component/new-page" hx-target="#body" hx-push-url="/newpage">New Page</a>
+            <a hx-get="component/blog1" hx-target="#content" hx-push-url="/blog-page1">Blog</a>
+            <a hx-get="component/product1" hx-target="#content" hx-push-url="/product-page1">Product 1</a>
+            <a hx-get="component/product2" hx-target="#content" hx-push-url="/product-page2">Product 2</a>
+        </section>
+    </header>
+    <section id="content">
+        <div style="text-align: center; background: coral;">
+            <img src="assets/android-chrome-512x512.png">
+            <div>Price: 1000</div>
+            <p>Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam cumque earum, rem quibusdam, quod consequuntur, necessitatibus reiciendis numquam odit aspernatur sit neque asperiores autem hic sint totam optio molestias. Nisi!</div>
+        </div>
+    </section>
+    <footer style="background-color: aqua; height: 100px;">
+        <h1 style=color:darkgoldenrod>This is footer</h1>
+    </footer>
+</body>
+</html>

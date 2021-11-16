@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Routing Experiment</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body id="body" x-data="{}">
+    <!-- Menu -->
+    <header style="background-color: aquamarine; height: 100px;">
+        <h1>This is Header</h1>
+        <section id="menu">
+            <a @click="
+                fetch('component/home.html')
+                .then(res => { 
+                    if(res.ok) {
+                        return res.text()
+                    }
+                })
+                .then(html => {
+                    document.getElementById('content').innerHTML = html
+                    history.pushState(null,'','home-page')
+                })">Home</a>
+            <a @click="
+                fetch('component/new-page.html')
+                .then(res => {
+                    if(res.ok) {
+                        return res.text()
+                    }
+                })
+                .then(html => {
+                    document.getElementById('body').innerHTML = html;
+                    history.pushState(null,'','new-page')
+                })"
+            >New Page</a>
+            <a @click="
+                fetch('component/blog1.html')
+                .then(res => { 
+                    if(res.ok) {
+                        return res.text()
+                    }
+                })
+                .then(html => {
+                    document.getElementById('content').innerHTML = html;
+                    history.pushState(null,'','blog-page1')
+            })"
+            >Blog</a>
+            <a @click="
+                fetch('component/product1.html')
+                .then(res => { 
+                    if(res.ok) {
+                        return res.text()
+                    }
+                })
+                .then(html => {
+                    document.getElementById('content').innerHTML = html;
+                    history.pushState(null,'','product-page1')
+            })"
+            >Product 1</a>
+            <a @click="
+                fetch('component/product2.html')
+                .then(res => { 
+                    if(res.ok) {
+                        return res.text()
+                    }
+                })
+                .then(html => {
+                    document.getElementById('content').innerHTML = html;
+                    history.pushState(null,'','product-page2')
+            })"
+            >Product 2</a>
+        </section>
+    </header>
+    <section id="content">
+        <div style="text-align: center; background: bisque;">
+            <img src="assets/grid-list.scene.png">
+            <div>Price: 600</div>
+            <p>Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam cumque earum, rem quibusdam, quod consequuntur, necessitatibus reiciendis numquam odit aspernatur sit neque asperiores autem hic sint totam optio molestias. Nisi!</div>
+        </div>
+    </section>
+    <footer style="background-color: aqua; height: 100px;">
+        <h1 style=color:darkgoldenrod>This is footer</h1>
+    </footer>
+</body>
+</html>
