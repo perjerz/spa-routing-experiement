@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Routing Experiment</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>function $(a){return document.getElementById(a);}</script>
+    <script defer>
+        function $(a){return document.getElementById(a);}
+        function component(html, id, url) {
+            fetch(html)
+                .then(res => { 
+                    if(res.ok) {
+                        return res.text()
+                    }
+                })
+                .then(html => {
+                    $(id).innerHTML = html
+                    history.pushState(null,'',url)
+                })
+        }
+    </script>
 </head>
 <body id="body" x-data="{}">
     <!-- Menu -->
