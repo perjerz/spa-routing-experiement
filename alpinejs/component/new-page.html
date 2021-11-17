@@ -10,7 +10,7 @@
                     }
                 })
                 .then(html => {
-                    document.getElementById('content').innerHTML = html
+                    $('content').innerHTML = html
                     history.pushState(null,'','home-page')
                 })">Home</a>
             <a @click="
@@ -21,7 +21,7 @@
                     }
                 })
                 .then(html => {
-                    document.getElementById('body').innerHTML = html;
+                    $('body').innerHTML = html;
                     history.pushState(null,'','new-page')
                 })"
             >New Page</a>
@@ -33,7 +33,7 @@
                     }
                 })
                 .then(html => {
-                    document.getElementById('content').innerHTML = html;
+                    $('content').innerHTML = html;
                     history.pushState(null,'','blog-page1')
             })"
             >Blog</a>
@@ -45,7 +45,7 @@
                     }
                 })
                 .then(html => {
-                    document.getElementById('content').innerHTML = html;
+                    $('content').innerHTML = html;
                     history.pushState(null,'','product-page1')
             })"
             >Product 1</a>
@@ -57,7 +57,8 @@
                     }
                 })
                 .then(html => {
-                    document.getElementById('content').innerHTML = html;
+                    $('content').innerHTML = html;
+                    doc
                     history.pushState(null,'','product-page2')
             })"
             >Product 2</a>
