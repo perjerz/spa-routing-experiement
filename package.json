@@ -1,0 +1,15 @@
+{
+    "name": "htmx-vs-alpinejs",
+    "description": "htmx vs alpinejs",
+    "authors": "PerJerZ",
+    "version": "1.0.0",
+    "main": "",
+    "dependencies": {},
+    "devDependencies": {
+        "serve": "13.0.2"
+    },
+    "scripts": {
+        "alpine": "serve ./htmx -p 3000",
+        "htmx": "serve ./alpinejs -p 3001"
+    }
+}
