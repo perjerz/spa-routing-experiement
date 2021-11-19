@@ -20,6 +20,13 @@
                     history.pushState(null,'',url)
                 })
         }
+        function loadScript(src, id) {
+            var s = document.createElement('script');
+            s.src = src;
+            s.type = 'text/javascript';
+            document.body.appendChild(s);
+            console.log(src);
+        }
     </script>
 </head>
 <body id="body" x-data="{}">
@@ -27,11 +34,14 @@
     <header style="background-color: aquamarine; height: 100px;">
         <h1>This is Header</h1>
         <section id="menu">
-            <a @click="component('component/home.html','content','home-page')">Home</a>
-            <a @click="component('component/new-page.html','body','new-page')">New Page</a>
-            <a @click="component('component/blog1.html','content','blog-page1')">Blog</a>
-            <a @click="component('component/product1.html','content','product-page1')">Product 1</a>
-            <a @click="component('component/product2.html','content','product-page2')">Product 2</a>
+            <a href="home-page.html" @click.prevent="component('component/home.html','content','home-page')">Home</a>
+            <a href="new-page.html" @click.prevent="component('component/new-page.html','body','new-page')">New Page</a>
+            <a href="blog-page1.html" @click.prevent="component('component/blog/blog1.html','content','blog-page1')">Blog</a>
+            <a href="product-page1.html" @click.prevent="
+            component('component/product/product1.html','content','product-page1');
+            loadScript('component/product/index.js', 'content')
+            ">Product 1</a>
+            <a href="product-page2.html" @click.prevent="component('component/product/product2.html','content','product-page2')">Product 2</a>
         </section>
     </header>
     <section id="content">

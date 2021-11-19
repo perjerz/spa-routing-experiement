@@ -9,7 +9,7 @@
         "serve": "13.0.2"
     },
     "scripts": {
-        "alpine": "serve ./htmx -p 3000",
-        "htmx": "serve ./alpinejs -p 3001"
+        "alpine": "serve ./alpinejs -p 3000",
+        "htmx": "serve ./htmx -p 3001"
     }
 }
