@@ -1,0 +1,22 @@
+<!-- Menu -->
+<header style="background-color: aquamarine; height: 100px;">
+    <h1>This is Header</h1>
+    <section id="menu">
+        <a href="home-page.html" @click.prevent="component('component/home.html','content','home-page')">Home</a>
+        <a href="new-page.html" @click.prevent="component('component/new-page.html','body','new-page')">New Page</a>
+        <a href="blog-page1.html" @click.prevent="component('component/blog/blog1.html','content','blog-page1')">Blog</a>
+        <a href="product-page1.html" @click.prevent="
+        component('component/product/product1.html','content','product-page1');
+        loadScript('component/product/index.js', 'content')
+        ">Product 1</a>
+        <a href="product-page2.html" @click.prevent="component('component/product/product2.html','content','product-page2')">Product 2</a>
+    </section>
+</header>
+<section id="content">
+    <h1>This is blog1</h1>
+    <img src="assets/expansion.scene.png">
+    <p style="color:cornflowerblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis omnis fuga voluptates consequuntur sed, qui ullam accusamus aut in aspernatur? In ullam mollitia libero minima, accusamus quidem a est magni.</p>
+</section>
+<footer style="background-color: aqua; height: 100px;">
+    <h1 style=color:darkgoldenrod>This is footer</h1>
+</footer>
