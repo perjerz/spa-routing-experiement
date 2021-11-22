@@ -2,14 +2,14 @@
 <header style="background-color: aquamarine; height: 100px;">
     <h1>This is Header</h1>
     <section id="menu">
-        <a href="home-page.html" @click.prevent="component('component/home.html','content','home-page')">Home</a>
-        <a href="new-page.html" @click.prevent="component('component/new-page.html','body','new-page')">New Page</a>
-        <a href="blog-page1.html" @click.prevent="component('component/blog/blog1.html','content','blog-page1')">Blog</a>
-        <a href="product-page1.html" @click.prevent="
-        component('component/product/product1.html','content','product-page1');
+        <a href="home.html" @click.prevent="component('component/content/home.html','content','home')">Home</a>
+        <a href="no-content-footer.html" @click.prevent="component('component/no-content-footer.html','body','no-content-footer')">New Page</a>
+        <a href="blog1.html" @click.prevent="component('component/content/blog1.html','content','blog1')">Blog</a>
+        <a href="product1.html" @click.prevent="
+        component('component/content/product1.html','content','product1');
         loadScript('component/product/index.js', 'content')
         ">Product 1</a>
-        <a href="product-page2.html" @click.prevent="component('component/product/product2.html','content','product-page2')">Product 2</a>
+        <a href="product2.html" @click.prevent="component('component/content/product2.html','content','product2')">Product 2</a>
     </section>
 </header>
 <section id="content">
