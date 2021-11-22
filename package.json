@@ -3,13 +3,17 @@
     "description": "htmx vs alpinejs",
     "authors": "PerJerZ",
     "version": "1.0.0",
+    "type":"module",
     "main": "",
-    "dependencies": {},
+    "dependencies": {
+        "ws": "^8.2.3"
+    },
     "devDependencies": {
         "serve": "13.0.2"
     },
     "scripts": {
         "alpine": "serve ./alpinejs -p 3000",
-        "htmx": "serve ./htmx -p 3001"
+        "htmx": "serve ./htmx -p 3001",
+        "ws": "node websocket.js"
     }
 }
