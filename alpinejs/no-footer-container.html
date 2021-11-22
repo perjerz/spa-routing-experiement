@@ -30,23 +30,16 @@
 </head>
 <body id="body" x-data="{}">
     <header id="header" style="background-color: aquamarine; height: 100px;">
-        <h1>This is Header</h1>
+        <h1 style="color:burlywood;">This is no content footer page.</h1>
         <section id="menu">
-            <a href="home1.html" @click.prevent="component('component/content/home.html','content','home')">Home</a>
+            <a href="home.html" @click.prevent="component('component/body/home.html','body','home')">Home</a>
             <a href="no-content-footer.html" @click.prevent="component('component/body/no-content-footer.html','body','no-content-footer')">No Content Footer Page</a>
-            <a href="blog1.html" @click.prevent="component('component/content/blog1.html','content','blog1')">Blog</a>
-            <a href="product1.html" @click.prevent="
-            component('component/content/product1.html','content','product1');
-            loadScript('component/product/index.js', 'content')
-            ">Product 1</a>
-            <a href="product2.html" @click.prevent="component('component/content/product2.html','content','product2')">Product 2</a>
+            <a href="blog1.html" @click.prevent="component('component/body/blog1.html','body','blog1')">Blog</a>
+            <a href="product1.html" @click.prevent="component('component/body/product1.html','body','product1')">Product 1</a>
+            <a href="product2.html" @click.prevent="component('component/body/product2.html','body','product2')">Product 2</a>
         </section>
     </header>
-    <section id="content">
-        <h1 style="color: coral;">This is home</h1>
-    </section>
-    <footer id="footer" style="background-color: aqua; height: 100px;">
-        <h1 style=color:darkgoldenrod>This is footer</h1>
-    </footer>
+    <section id="content">No content</section>
+    <section id="footer">No footer</section>
 </body>
 </html>
